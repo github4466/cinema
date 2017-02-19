@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html class="no-js">       
+	<head>
+		<meta charset="UTF-8" />      
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>电影院座位预览</title>
+		<link rel="stylesheet" type="text/css" href="css/all.css" />
+		<script src="js/modernizr-custom.js"></script>     
+	</head>
+	<body>  
+		<header class="header">
+			<!-- 回退信息 -->
+			<p class="note note-screen">请在大屏幕上观看</p>
+			<p class="note note-support">您的浏览器不支持CSS3 preserve-3d!</p>
+		</header>
+
+		<!-- 舞台 含房间 -->
+		<div class="container">
+			<!--房间  6墙面 座位区域 -->
+			<div class="cube"> 
+				<div class="cube-side cube-side-front"></div>
+				<div class="cube-side cube-side-back">
+					<!--屏幕-->
+					<div class="screen">
+						<!--preload设置页面加载后载入音频  codecs设置编解码器*****************-->
+						<video class="video-player" src="media/sintel.mp4" preload="auto" poster="media/sintel.jpg">
+							<!--要多加点  火狐浏览器都看不到了 IE也不行 *********************** -->
+							<source src="media/sintel.ogg" type='video/ogg; codecs="theora, vorbis"'>
+							<source src="media/sintel.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>		
+							<p>您的浏览器不支持播放的视频格式</p>
+						</video>
+						<!--播放暂停-->
+						<button class="action action-play action-shown"></button>
+						<div class="intro intro-shown">
+							<div class="intro-side">
+								<h2 class="intro-title">
+									<span class="intro-down">Sintel <em>by</em> <a href="https://durian.blender.org/" target="_blank">The Blender Foundation</a></span>
+								</h2>
+							</div>
+							<div class="intro-side">
+								<button class="action action-seats">选择座位</button>
+							</div> 
+						</div>
+					</div>
+				</div>
+				<div class="cube-side cube-side-left"></div>
+				<div class="cube-side cube-side-right"></div>
+				<div class="cube-side cube-side-top"></div>
+				<div class="cube-side cube-side-bottom"></div>  
+				<!-- 座位区域 -->
+				<div class="seat-area">
+					<!--A第一行  A1-A18从左往右  B第二行 -->
+					<div class="row">
+						<div data-seat-id="A1" class="row-seat"></div>
+						<div data-seat-id="A2" class="row-seat"></div>
+						<div data-seat-id="A3" class="row-seat"></div>
+						<div data-seat-id="A4" class="row-seat"></div>
+						<div data-seat-id="A5" class="row-seat"></div>
+						<div data-seat-id="A6" class="row-seat"></div>
+						<div data-seat-id="A7" class="row-seat"></div>
+						<div data-seat-id="A8" class="row-seat"></div>
+						<div data-seat-id="A9" class="row-seat"></div>
+						<div data-seat-id="A10" class="row-seat"></div>
+						<div data-seat-id="A11" class="row-seat"></div>
+						<div data-seat-id="A12" class="row-seat"></div>
+						<div data-seat-id="A13" class="row-seat"></div>
+						<div data-seat-id="A14" class="row-seat"></div>
+						<div data-seat-id="A15" class="row-seat"></div>
+						<div data-seat-id="A16" class="row-seat"></div>
+						<div data-seat-id="A17" class="row-seat"></div>
+						<div data-seat-id="A18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="B1" class="row-seat"></div>
+						<div data-seat-id="B2" class="row-seat"></div>
+						<div data-seat-id="B3" class="row-seat"></div>
+						<div data-seat-id="B4" class="row-seat"></div>
+						<div data-seat-id="B5" class="row-seat"></div>
+						<div data-seat-id="B6" class="row-seat"></div>
+						<div data-seat-id="B7" class="row-seat"></div>
+						<div data-seat-id="B8" class="row-seat"></div>
+						<div data-seat-id="B9" class="row-seat"></div>
+						<div data-seat-id="B10" class="row-seat"></div>
+						<div data-seat-id="B11" class="row-seat"></div>
+						<div data-seat-id="B12" class="row-seat"></div>
+						<div data-seat-id="B13" class="row-seat"></div>
+						<div data-seat-id="B14" class="row-seat"></div>
+						<div data-seat-id="B15" class="row-seat"></div>
+						<div data-seat-id="B16" class="row-seat"></div>
+						<div data-seat-id="B17" class="row-seat"></div>
+						<div data-seat-id="B18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="C1" class="row-seat"></div>
+						<div data-seat-id="C2" class="row-seat"></div>
+						<div data-seat-id="C3" class="row-seat"></div>
+						<div data-seat-id="C4" class="row-seat"></div>
+						<div data-seat-id="C5" class="row-seat"></div>
+						<div data-seat-id="C6" class="row-seat"></div>
+						<div data-seat-id="C7" class="row-seat"></div>
+						<div data-seat-id="C8" class="row-seat"></div>
+						<div data-seat-id="C9" class="row-seat"></div>
+						<div data-seat-id="C10" class="row-seat"></div>
+						<div data-seat-id="C11" class="row-seat"></div>
+						<div data-seat-id="C12" class="row-seat"></div>
+						<div data-seat-id="C13" class="row-seat"></div>
+						<div data-seat-id="C14" class="row-seat"></div>
+						<div data-seat-id="C15" class="row-seat"></div>
+						<div data-seat-id="C16" class="row-seat"></div>
+						<div data-seat-id="C17" class="row-seat"></div>
+						<div data-seat-id="C18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="D1" class="row-seat"></div>
+						<div data-seat-id="D2" class="row-seat"></div>
+						<div data-seat-id="D3" class="row-seat"></div>
+						<div data-seat-id="D4" class="row-seat"></div>
+						<div data-seat-id="D5" class="row-seat"></div>
+						<div data-seat-id="D6" class="row-seat"></div>
+						<div data-seat-id="D7" class="row-seat"></div>
+						<div data-seat-id="D8" class="row-seat"></div>
+						<div data-seat-id="D9" class="row-seat"></div>
+						<div data-seat-id="D10" class="row-seat"></div>
+						<div data-seat-id="D11" class="row-seat"></div>
+						<div data-seat-id="D12" class="row-seat"></div>
+						<div data-seat-id="D13" class="row-seat"></div>
+						<div data-seat-id="D14" class="row-seat"></div>
+						<div data-seat-id="D15" class="row-seat"></div>
+						<div data-seat-id="D16" class="row-seat"></div>
+						<div data-seat-id="D17" class="row-seat"></div>
+						<div data-seat-id="D18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="E1" class="row-seat"></div>
+						<div data-seat-id="E2" class="row-seat"></div>
+						<div data-seat-id="E3" class="row-seat"></div>
+						<div data-seat-id="E4" class="row-seat"></div>
+						<div data-seat-id="E5" class="row-seat"></div>
+						<div data-seat-id="E6" class="row-seat"></div>
+						<div data-seat-id="E7" class="row-seat"></div>
+						<div data-seat-id="E8" class="row-seat"></div>
+						<div data-seat-id="E9" class="row-seat"></div>
+						<div data-seat-id="E10" class="row-seat"></div>
+						<div data-seat-id="E11" class="row-seat"></div>
+						<div data-seat-id="E12" class="row-seat"></div>
+						<div data-seat-id="E13" class="row-seat"></div>
+						<div data-seat-id="E14" class="row-seat"></div>
+						<div data-seat-id="E15" class="row-seat"></div>
+						<div data-seat-id="E16" class="row-seat"></div>
+						<div data-seat-id="E17" class="row-seat"></div>
+						<div data-seat-id="E18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="F1" class="row-seat"></div>
+						<div data-seat-id="F2" class="row-seat"></div>
+						<div data-seat-id="F3" class="row-seat"></div>
+						<div data-seat-id="F4" class="row-seat"></div>
+						<div data-seat-id="F5" class="row-seat"></div>
+						<div data-seat-id="F6" class="row-seat"></div>
+						<div data-seat-id="F7" class="row-seat"></div>
+						<div data-seat-id="F8" class="row-seat"></div>
+						<div data-seat-id="F9" class="row-seat"></div>
+						<div data-seat-id="F10" class="row-seat"></div>
+						<div data-seat-id="F11" class="row-seat"></div>
+						<div data-seat-id="F12" class="row-seat"></div>
+						<div data-seat-id="F13" class="row-seat"></div>
+						<div data-seat-id="F14" class="row-seat"></div>
+						<div data-seat-id="F15" class="row-seat"></div>
+						<div data-seat-id="F16" class="row-seat"></div>
+						<div data-seat-id="F17" class="row-seat"></div>
+						<div data-seat-id="F18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="G1" class="row-seat"></div>
+						<div data-seat-id="G2" class="row-seat"></div>
+						<div data-seat-id="G3" class="row-seat"></div>
+						<div data-seat-id="G4" class="row-seat"></div>
+						<div data-seat-id="G5" class="row-seat"></div>
+						<div data-seat-id="G6" class="row-seat"></div>
+						<div data-seat-id="G7" class="row-seat"></div>
+						<div data-seat-id="G8" class="row-seat"></div>
+						<div data-seat-id="G9" class="row-seat"></div>
+						<div data-seat-id="G10" class="row-seat"></div>
+						<div data-seat-id="G11" class="row-seat"></div>
+						<div data-seat-id="G12" class="row-seat"></div>
+						<div data-seat-id="G13" class="row-seat"></div>
+						<div data-seat-id="G14" class="row-seat"></div>
+						<div data-seat-id="G15" class="row-seat"></div>
+						<div data-seat-id="G16" class="row-seat"></div>
+						<div data-seat-id="G17" class="row-seat"></div>
+						<div data-seat-id="G18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="H1" class="row-seat"></div>
+						<div data-seat-id="H2" class="row-seat"></div>
+						<div data-seat-id="H3" class="row-seat"></div>
+						<div data-seat-id="H4" class="row-seat"></div>
+						<div data-seat-id="H5" class="row-seat"></div>
+						<div data-seat-id="H6" class="row-seat"></div>
+						<div data-seat-id="H7" class="row-seat"></div>
+						<div data-seat-id="H8" class="row-seat"></div>
+						<div data-seat-id="H9" class="row-seat"></div>
+						<div data-seat-id="H10" class="row-seat"></div>
+						<div data-seat-id="H11" class="row-seat"></div>
+						<div data-seat-id="H12" class="row-seat"></div>
+						<div data-seat-id="H13" class="row-seat"></div>
+						<div data-seat-id="H14" class="row-seat"></div>
+						<div data-seat-id="H15" class="row-seat"></div>
+						<div data-seat-id="H16" class="row-seat"></div>
+						<div data-seat-id="H17" class="row-seat"></div>
+						<div data-seat-id="H18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="I1" class="row-seat"></div>
+						<div data-seat-id="I2" class="row-seat"></div>
+						<div data-seat-id="I3" class="row-seat"></div>
+						<div data-seat-id="I4" class="row-seat"></div>
+						<div data-seat-id="I5" class="row-seat"></div>
+						<div data-seat-id="I6" class="row-seat"></div>
+						<div data-seat-id="I7" class="row-seat"></div>
+						<div data-seat-id="I8" class="row-seat"></div>
+						<div data-seat-id="I9" class="row-seat"></div>
+						<div data-seat-id="I10" class="row-seat"></div>
+						<div data-seat-id="I11" class="row-seat"></div>
+						<div data-seat-id="I12" class="row-seat"></div>
+						<div data-seat-id="I13" class="row-seat"></div>
+						<div data-seat-id="I14" class="row-seat"></div>
+						<div data-seat-id="I15" class="row-seat"></div>
+						<div data-seat-id="I16" class="row-seat"></div>
+						<div data-seat-id="I17" class="row-seat"></div>
+						<div data-seat-id="I18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="J1" class="row-seat"></div>
+						<div data-seat-id="J2" class="row-seat"></div>
+						<div data-seat-id="J3" class="row-seat"></div>
+						<div data-seat-id="J4" class="row-seat"></div>
+						<div data-seat-id="J5" class="row-seat"></div>
+						<div data-seat-id="J6" class="row-seat"></div>
+						<div data-seat-id="J7" class="row-seat"></div>
+						<div data-seat-id="J8" class="row-seat"></div>
+						<div data-seat-id="J9" class="row-seat"></div>
+						<div data-seat-id="J10" class="row-seat"></div>
+						<div data-seat-id="J11" class="row-seat"></div>
+						<div data-seat-id="J12" class="row-seat"></div>
+						<div data-seat-id="J13" class="row-seat"></div>
+						<div data-seat-id="J14" class="row-seat"></div>
+						<div data-seat-id="J15" class="row-seat"></div>
+						<div data-seat-id="J16" class="row-seat"></div>
+						<div data-seat-id="J17" class="row-seat"></div>
+						<div data-seat-id="J18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="K1" class="row-seat"></div>
+						<div data-seat-id="K2" class="row-seat"></div>
+						<div data-seat-id="K3" class="row-seat"></div>
+						<div data-seat-id="K4" class="row-seat"></div>
+						<div data-seat-id="K5" class="row-seat"></div>
+						<div data-seat-id="K6" class="row-seat"></div>
+						<div data-seat-id="K7" class="row-seat"></div>
+						<div data-seat-id="K8" class="row-seat"></div>
+						<div data-seat-id="K9" class="row-seat"></div>
+						<div data-seat-id="K10" class="row-seat"></div>
+						<div data-seat-id="K11" class="row-seat"></div>
+						<div data-seat-id="K12" class="row-seat"></div>
+						<div data-seat-id="K13" class="row-seat"></div>
+						<div data-seat-id="K14" class="row-seat"></div>
+						<div data-seat-id="K15" class="row-seat"></div>
+						<div data-seat-id="K16" class="row-seat"></div>
+						<div data-seat-id="K17" class="row-seat"></div>
+						<div data-seat-id="K18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="L1" class="row-seat"></div>
+						<div data-seat-id="L2" class="row-seat"></div>
+						<div data-seat-id="L3" class="row-seat"></div>
+						<div data-seat-id="L4" class="row-seat"></div>
+						<div data-seat-id="L5" class="row-seat"></div>
+						<div data-seat-id="L6" class="row-seat"></div>
+						<div data-seat-id="L7" class="row-seat"></div>
+						<div data-seat-id="L8" class="row-seat"></div>
+						<div data-seat-id="L9" class="row-seat"></div>
+						<div data-seat-id="L10" class="row-seat"></div>
+						<div data-seat-id="L11" class="row-seat"></div>
+						<div data-seat-id="L12" class="row-seat"></div>
+						<div data-seat-id="L13" class="row-seat"></div>
+						<div data-seat-id="L14" class="row-seat"></div>
+						<div data-seat-id="L15" class="row-seat"></div>
+						<div data-seat-id="L16" class="row-seat"></div>
+						<div data-seat-id="L17" class="row-seat"></div>
+						<div data-seat-id="L18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="M1" class="row-seat"></div>
+						<div data-seat-id="M2" class="row-seat"></div>
+						<div data-seat-id="M3" class="row-seat"></div>
+						<div data-seat-id="M4" class="row-seat"></div>
+						<div data-seat-id="M5" class="row-seat"></div>
+						<div data-seat-id="M6" class="row-seat"></div>
+						<div data-seat-id="M7" class="row-seat"></div>
+						<div data-seat-id="M8" class="row-seat"></div>
+						<div data-seat-id="M9" class="row-seat"></div>
+						<div data-seat-id="M10" class="row-seat"></div>
+						<div data-seat-id="M11" class="row-seat"></div>
+						<div data-seat-id="M12" class="row-seat"></div>
+						<div data-seat-id="M13" class="row-seat"></div>
+						<div data-seat-id="M14" class="row-seat"></div>
+						<div data-seat-id="M15" class="row-seat"></div>
+						<div data-seat-id="M16" class="row-seat"></div>
+						<div data-seat-id="M17" class="row-seat"></div>
+						<div data-seat-id="M18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="N1" class="row-seat"></div>
+						<div data-seat-id="N2" class="row-seat"></div>
+						<div data-seat-id="N3" class="row-seat"></div>
+						<div data-seat-id="N4" class="row-seat"></div>
+						<div data-seat-id="N5" class="row-seat"></div>
+						<div data-seat-id="N6" class="row-seat"></div>
+						<div data-seat-id="N7" class="row-seat"></div>
+						<div data-seat-id="N8" class="row-seat"></div>
+						<div data-seat-id="N9" class="row-seat"></div>
+						<div data-seat-id="N10" class="row-seat"></div>
+						<div data-seat-id="N11" class="row-seat"></div>
+						<div data-seat-id="N12" class="row-seat"></div>
+						<div data-seat-id="N13" class="row-seat"></div>
+						<div data-seat-id="N14" class="row-seat"></div>
+						<div data-seat-id="N15" class="row-seat"></div>
+						<div data-seat-id="N16" class="row-seat"></div>
+						<div data-seat-id="N17" class="row-seat"></div>
+						<div data-seat-id="N18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="O1" class="row-seat"></div>
+						<div data-seat-id="O2" class="row-seat"></div>
+						<div data-seat-id="O3" class="row-seat"></div>
+						<div data-seat-id="O4" class="row-seat"></div>
+						<div data-seat-id="O5" class="row-seat"></div>
+						<div data-seat-id="O6" class="row-seat"></div>
+						<div data-seat-id="O7" class="row-seat"></div>
+						<div data-seat-id="O8" class="row-seat"></div>
+						<div data-seat-id="O9" class="row-seat"></div>
+						<div data-seat-id="O10" class="row-seat"></div>
+						<div data-seat-id="O11" class="row-seat"></div>
+						<div data-seat-id="O12" class="row-seat"></div>
+						<div data-seat-id="O13" class="row-seat"></div>
+						<div data-seat-id="O14" class="row-seat"></div>
+						<div data-seat-id="O15" class="row-seat"></div>
+						<div data-seat-id="O16" class="row-seat"></div>
+						<div data-seat-id="O17" class="row-seat"></div>
+						<div data-seat-id="O18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="P1" class="row-seat"></div>
+						<div data-seat-id="P2" class="row-seat"></div>
+						<div data-seat-id="P3" class="row-seat"></div>
+						<div data-seat-id="P4" class="row-seat"></div>
+						<div data-seat-id="P5" class="row-seat"></div>
+						<div data-seat-id="P6" class="row-seat"></div>
+						<div data-seat-id="P7" class="row-seat"></div>
+						<div data-seat-id="P8" class="row-seat"></div>
+						<div data-seat-id="P9" class="row-seat"></div>
+						<div data-seat-id="P10" class="row-seat"></div>
+						<div data-seat-id="P11" class="row-seat"></div>
+						<div data-seat-id="P12" class="row-seat"></div>
+						<div data-seat-id="P13" class="row-seat"></div>
+						<div data-seat-id="P14" class="row-seat"></div>
+						<div data-seat-id="P15" class="row-seat"></div>
+						<div data-seat-id="P16" class="row-seat"></div>
+						<div data-seat-id="P17" class="row-seat"></div>
+						<div data-seat-id="P18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="Q1" class="row-seat"></div>
+						<div data-seat-id="Q2" class="row-seat"></div>
+						<div data-seat-id="Q3" class="row-seat"></div>
+						<div data-seat-id="Q4" class="row-seat"></div>
+						<div data-seat-id="Q5" class="row-seat"></div>
+						<div data-seat-id="Q6" class="row-seat"></div>
+						<div data-seat-id="Q7" class="row-seat"></div>
+						<div data-seat-id="Q8" class="row-seat"></div>
+						<div data-seat-id="Q9" class="row-seat"></div>
+						<div data-seat-id="Q10" class="row-seat"></div>
+						<div data-seat-id="Q11" class="row-seat"></div>
+						<div data-seat-id="Q12" class="row-seat"></div>
+						<div data-seat-id="Q13" class="row-seat"></div>
+						<div data-seat-id="Q14" class="row-seat"></div>
+						<div data-seat-id="Q15" class="row-seat"></div>
+						<div data-seat-id="Q16" class="row-seat"></div>
+						<div data-seat-id="Q17" class="row-seat"></div>
+						<div data-seat-id="Q18" class="row-seat"></div>
+					</div>
+					<div class="row">
+						<div data-seat-id="R1" class="row-seat"></div>
+						<div data-seat-id="R2" class="row-seat"></div>
+						<div data-seat-id="R3" class="row-seat"></div>
+						<div data-seat-id="R4" class="row-seat"></div>
+						<div data-seat-id="R5" class="row-seat"></div>
+						<div data-seat-id="R6" class="row-seat"></div>
+						<div data-seat-id="R7" class="row-seat"></div>
+						<div data-seat-id="R8" class="row-seat"></div>
+						<div data-seat-id="R9" class="row-seat"></div>
+						<div data-seat-id="R10" class="row-seat"></div>
+						<div data-seat-id="R11" class="row-seat"></div>
+						<div data-seat-id="R12" class="row-seat"></div>
+						<div data-seat-id="R13" class="row-seat"></div>
+						<div data-seat-id="R14" class="row-seat"></div>
+						<div data-seat-id="R15" class="row-seat"></div>
+						<div data-seat-id="R16" class="row-seat"></div>
+						<div data-seat-id="R17" class="row-seat"></div>
+						<div data-seat-id="R18" class="row-seat"></div>
+					</div>
+				</div>
+			</div>
+		</div><!-- container -->
+  
+		<div class="ticket">
+			<h3 class="ticket-title">购票区域</h3>
+			<div class="ticket-seat-area">
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="A1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A9"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="A18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="B1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B8"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="B18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="C1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C4"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="C18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="D1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="D15"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="E1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E9"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="E18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="F1"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="F18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="G1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G6"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="G18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="H1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="H18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="I1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="I18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="J1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J4"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="J18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="K1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="K18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="L1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L13"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="L18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="M1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M9"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="M18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="N1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N2"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="N18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="O1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O13"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-reserved"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="O18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="P1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="P18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="Q1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="Q18"></div>
+				</div>
+				<div class="row">
+					<div class="row-seat row-seat-available" data-seat-id="R1"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R2"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R3"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R4"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R5"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R6"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R7"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R8"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R9"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R10"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R11"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R12"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R13"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R14"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R15"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R16"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R17"></div>
+					<div class="row-seat row-seat-available" data-seat-id="R18"></div>
+				</div>  
+			</div>
+			<ul class="ticket-legend">
+				<li class="legend-item legend-item-available">空闲</li>
+				<li class="legend-item legend-item-reserved">已预订</li>
+				<li class="legend-item legend-item-selected">选择</li>
+			</ul>
+			<button class="action action-buy">购票</button>
+		</div>
+
+		<button class="action action-lookaround action-disabled"></button> 
+
+		<script src="js/all.js"></script>      
+	</body>
+</html>
